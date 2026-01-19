@@ -151,8 +151,12 @@ export default async function ProductPage({ params }: PageProps) {
                                             if (block.level === 2) {
                                                 return <h2 key={index} className="text-[16px] font-bold text-gray-900 mt-10 mb-4">{block.text}</h2>;
                                             }
-                                            const Htag = `h${block.level || 2}` as keyof JSX.IntrinsicElements;
-                                            return <Htag key={index} className="text-[18px] font-bold text-gray-800 mt-8 mb-4">{block.text}</Htag>;
+                                            const level = block.level || 2;
+                                            if (level === 3) return <h3 key={index} className="text-[18px] font-bold text-gray-800 mt-8 mb-4">{block.text}</h3>;
+                                            if (level === 4) return <h4 key={index} className="text-[18px] font-bold text-gray-800 mt-8 mb-4">{block.text}</h4>;
+                                            if (level === 5) return <h5 key={index} className="text-[18px] font-bold text-gray-800 mt-8 mb-4">{block.text}</h5>;
+                                            if (level === 6) return <h6 key={index} className="text-[18px] font-bold text-gray-800 mt-8 mb-4">{block.text}</h6>;
+                                            return <h2 key={index} className="text-[18px] font-bold text-gray-800 mt-8 mb-4">{block.text}</h2>;
 
                                         case "paragraph":
                                             return (

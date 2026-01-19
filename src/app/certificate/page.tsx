@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { FaAward, FaCheckCircle, FaSearchPlus } from "react-icons/fa";
 import { Metadata } from "next";
 
